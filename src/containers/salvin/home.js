@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Box, Typography, Button, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Logo from "../../assets/images/logo.PNG";
+import clipPathBg from "../../assets/images/buttonClippath.svg";
 import { componentsRoutes } from "../../common/routes";
 const homeStyles = makeStyles({
   centered: {
@@ -24,6 +25,33 @@ const homeStyles = makeStyles({
   uppercase: {
     textTransform: "uppercase",
     fontWeight: "bold",
+  },
+  button: {
+    position: "relative",
+    borderRadius: "1rem",
+    width: "6rem",
+    overflow: "hidden",
+    transition: "transform 1s ease",
+
+    "&:hover $buttonClipPath": {
+      transform: "translateY(2px)",
+    },
+  },
+  buttonClipPath: {
+    background: `url(${clipPathBg}) no-repeat`,
+    position: "absolute",
+    top: "0",
+    width: "100%",
+    height: "100%",
+    transform: "translateY(-20px)",
+    transition: "transform 1s ease-in",
+  },
+  buttonText: {
+    zIndex: "2",
+    // transform: "translateY(-60px)",
+  },
+  onHover: {
+    transform: "translateY(0px)",
   },
 });
 const Home = () => {
@@ -54,9 +82,17 @@ const Home = () => {
         >
           user manual
         </Typography>
-        <Link to={componentsRoutes.home.path}>
-          <Button variant="contained" color="primary">
-            Start
+        <Link
+          to={componentsRoutes.home.path}
+          style={{ textDecoration: "none" }}
+        >
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.button}
+          >
+            <span className={classes.buttonClipPath}></span>
+            <span className={classes.buttonText}>start</span>
           </Button>
         </Link>
       </Box>
