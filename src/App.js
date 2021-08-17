@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { containerRoutes, componentsRoutes } from "./common/routes";
+import { containersRoutes, componentsRoutes } from "./common/routes";
 import "./App.css";
 
 const assignRoutes = (routes) => {
@@ -16,10 +16,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          {assignRoutes(containerRoutes)}
-          {assignRoutes(componentsRoutes)}
-        </Switch>
+        <Switch>{assignRoutes(containersRoutes)}</Switch>
       </div>
     </Router>
   );

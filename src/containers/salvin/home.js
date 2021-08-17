@@ -4,7 +4,7 @@ import { Container, Box, Typography, Button, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Logo from "../../assets/images/logo.PNG";
 import clipPathBg from "../../assets/images/buttonClippath.svg";
-import { componentsRoutes } from "../../common/routes";
+import { containersRoutes } from "../../common/routes";
 const homeStyles = makeStyles({
   centered: {
     display: "flex",
@@ -83,7 +83,7 @@ const Home = () => {
           user manual
         </Typography>
         <Link
-          to={componentsRoutes.home.path}
+          to={containersRoutes.manual.path}
           style={{ textDecoration: "none" }}
         >
           <Button

@@ -12,7 +12,7 @@ export const componentsRoutes = {
   // Component: Components.Specification,
   // },
 };
-export const containerRoutes = {
+export const containersRoutes = {
   home: { path: "/", component: Containers.Home, exact: true },
-  installation: { path: "/manual", component: Containers.Manual },
+  manual: { path: "/manual", component: Containers.Manual },
 };
