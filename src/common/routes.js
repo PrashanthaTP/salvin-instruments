@@ -1,5 +1,5 @@
-import Components from "../components";
-import Containers from "../containers/salvin";
+import Components from "components";
+import Containers from "containers/salvin";
 export const componentsRoutes = {
   home: { path: "/home", component: Components.Home },
   // installation: { path: "/installation", component: Components.Installation },

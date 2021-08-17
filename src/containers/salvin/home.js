@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Box, Typography, Button, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Logo from "../../assets/images/logo.PNG";
-import clipPathBg from "../../assets/images/buttonClippath.svg";
-import { containersRoutes } from "../../common/routes";
+
+import Logo from "assets/images/logo.PNG";
+import clipPathBg from "assets/images/buttonClippath.svg";
+import { containersRoutes } from "common/routes";
+
 const homeStyles = makeStyles({
   centered: {
     display: "flex",

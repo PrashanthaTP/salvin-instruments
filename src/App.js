@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { containersRoutes, componentsRoutes } from "./common/routes";
-import "./App.css";
+import { containersRoutes } from "common/routes";
+import "App.css";
 
 const assignRoutes = (routes) => {
   return Object.keys(routes).map((key, index) => {
